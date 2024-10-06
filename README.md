@@ -41,5 +41,8 @@ https://commentsusa.com/node/20240913-v2ray.txt
 https://v2ray-clash.top/v2ray-subscription@a/2024-09-13-list-1.txt
 <br>
 
-配置Python环境变量
+配置Python环境变量<br>
 https://hailuoai.com/share/chat/z6vXGxY5?xx=1K6jYBgp5gv8
+
+pip更新<br>
+https://hailuoai.com/share/chat/mBzr1ygB?xx=l49EOJwmDA48
