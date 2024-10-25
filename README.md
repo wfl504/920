@@ -46,3 +46,7 @@ https://hailuoai.com/share/chat/z6vXGxY5?xx=1K6jYBgp5gv8
 
 pip更新<br>
 https://hailuoai.com/share/chat/mBzr1ygB?xx=l49EOJwmDA48
+
+Python自动抢票（大麦）<br>
+https://gitee.com/lhbmy/Autoticket#https://gitee.com/link?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2F2f1acc6ff2c6
+
