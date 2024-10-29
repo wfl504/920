@@ -50,3 +50,6 @@ https://hailuoai.com/share/chat/mBzr1ygB?xx=l49EOJwmDA48
 Python自动抢票（大麦）<br>
 https://gitee.com/lhbmy/Autoticket#https://gitee.com/link?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2F2f1acc6ff2c6
 
+下单效果<br>
+https://www.wubin.work/blog/articles/293
+
