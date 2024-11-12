@@ -59,5 +59,5 @@ https://gitee.com/lhbmy/Autoticket#https://gitee.com/link?target=https%3A%2F%2Fw
 https://www.wubin.work/blog/articles/293
 
 部署AI<br>
-v0.dev
+https://v0.dev
 
