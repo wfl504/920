@@ -58,3 +58,6 @@ https://gitee.com/lhbmy/Autoticket#https://gitee.com/link?target=https%3A%2F%2Fw
 下单效果<br>
 https://www.wubin.work/blog/articles/293
 
+部署AI<br>
+v0.dev
+
