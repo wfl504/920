@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .news-item {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .news-item h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #007BFF;
+        }
+        .news-item p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .news-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .hot-score {
+            font-weight: bold;
+            color: #FF4500;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>热门新闻</h1> -->
+    <div id="news-container">
+        <!-- 新闻内容将通过JavaScript动态加载 -->
+    </div>
+
+    <script>
+        // 定义获取新闻数据的函数
+        function fetchNews() {
+            const apiUrl = 'https://cn.apihz.cn/api/xinwen/baidu.php?id=88888888&key=88888888';
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('网络响应不是OK');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.code === 200) {
+                        displayNews(data.data);
+                    } else {
+                        throw new Error('获取数据失败');
+                    }
+                })
+                .catch(error => {
+                    console.error('获取新闻数据时出错:', error);
+                    document.getElementById('news-container').innerHTML = '<p>无法加载新闻数据。</p>';
+                });
+        }
+
+        // 定义显示新闻数据的函数
+        function displayNews(newsList) {
+            const container = document.getElementById('news-container');
+
+            newsList.forEach(item => {
+                // 创建新闻项的HTML元素
+                const newsItem = document.createElement('div');
+                newsItem.className = 'news-item';
+
+                // 新闻标题
+                const title = document.createElement('h2');
+                const titleLink = document.createElement('a');
+                titleLink.href = item.url;
+                titleLink.textContent = item.query;
+                title.appendChild(titleLink);
+                newsItem.appendChild(title);
+
+                // 新闻描述
+                if (item.desc) {
+                    const desc = document.createElement('p');
+                    desc.textContent = item.desc;
+                    newsItem.appendChild(desc);
+                }
+
+                // 新闻热度
+                const hotScore = document.createElement('p');
+                hotScore.className = 'hot-score';
+                hotScore.textContent = `热度: ${item.hotScore}`;
+                newsItem.appendChild(hotScore);
+
+                // 新闻图片
+                if (item.img) {
+                    const img = document.createElement('img');
+                    img.src = item.img;
+                    img.alt = item.query;
+                    newsItem.appendChild(img);
+                }
+
+                // 将新闻项添加到容器中
+                container.appendChild(newsItem);
+            });
+        }
+
+        // 调用函数获取并显示新闻数据
+        fetchNews();
+    </script>
+</body>
+</html>
